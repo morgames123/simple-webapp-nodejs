@@ -20,7 +20,12 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "docker kill nodewebapp"
+                try {
+                    sh "docker kill nodewebapp"
+                }
+                catch {
+                    echo "No nodewebbapp container was running
+                }
                 sh "docker run -itd nodewebapp --name nodewebapp -p 3000:3000"
                 sh "docker ps"
             }
