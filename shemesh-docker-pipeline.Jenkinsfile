@@ -15,6 +15,13 @@ pipeline {
         stage("Build") {
             steps {
                 sh "docker build . -f Dockerfile-Shemesh -t nodewebapp"
+                sh "docker images"
+            }
+        }
+        stage("Deploy") {
+            steps {
+                sh "docker run -itd nodewebapp"
+                sh "docker ps"
             }
         }
     }
