@@ -20,7 +20,6 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "docker kill nodewebapp"
                 sh "docker run -itd nodewebapp -p 3000:3000"
                 sh "docker ps"
             }
