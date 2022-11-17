@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Get SCM') {
             steps {
-                git "https://github.com/ranazrad/simple-webapp-nodejs.git"
+                git "https://github.com/morgames123/simple-webapp-nodejs.git"
                 sh "cat Jenkinsfile"
 
             }
