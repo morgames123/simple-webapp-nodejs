@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh "docker kill nodewebapp"
+                        sh "docker rm --force nodewebapp"
                     }
                     catch(all) {
                         echo "No nodewebbapp container was running"
