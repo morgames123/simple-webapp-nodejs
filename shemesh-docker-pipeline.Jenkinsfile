@@ -7,6 +7,7 @@ pipeline {
         stage("Clean Workspace") {
             steps {
                 cleanWs()
+                runCommand()
             }
         }
         stage('Clone') {
