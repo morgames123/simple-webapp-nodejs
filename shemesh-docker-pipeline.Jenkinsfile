@@ -24,7 +24,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 script {
-                    config = readYaml(text: libraryResource("environment.yml"))
+                    config = readYaml(text: libraryResource("environments.yml"))
                     print (config.buildImage)
                     try {
                         sh "docker rm --force nodewebapp"
