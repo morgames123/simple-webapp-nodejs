@@ -23,7 +23,7 @@ pipeline {
                 try {
                     sh "docker kill nodewebapp"
                 }
-                catch {
+                catch(all) {
                     echo "No nodewebbapp container was running
                 }
                 sh "docker run -itd nodewebapp --name nodewebapp -p 3000:3000"
