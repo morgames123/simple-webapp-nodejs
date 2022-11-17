@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "docker run -itd nodewebapp -p 3000:3000"
+                sh "docker run -itd nodewebapp --name nodewebapp -p 3000:3000"
                 sh "docker ps"
             }
         }
