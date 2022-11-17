@@ -28,7 +28,7 @@ pipeline {
                         echo "No nodewebbapp container was running"
                     }
                 }
-                sh "docker run -it nodewebapp --name nodewebapp -p 3000:3000"
+                sh "docker run -itd --name nodewebapp -p 3000:3000 nodewebapp"
                 sh "docker ps"
             }
         }
