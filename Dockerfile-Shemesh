@@ -1,7 +1,8 @@
 FROM node:8
 WORKDIR /app
 
-COPY . .  # Copy entire local dir inside the docker
+# Copy entire local dir inside the docker
+COPY . .  
 
 RUN npm install
 RUN npm run test
