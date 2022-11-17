@@ -10,6 +10,7 @@ pipeline {
             steps {
                 git "https://github.com/ranazrad/simple-webapp-nodejs.git"
                 sh "cat Jenkinsfile"
+
             }
         }
         stage('Build') {
