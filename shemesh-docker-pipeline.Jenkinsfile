@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Build") {
             steps {
-                sh "docker build . -f Dockerfile-Shemesh
+                sh "docker build . -f Dockerfile-Shemesh"
             }
         }
     }
